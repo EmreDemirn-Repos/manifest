@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- remote list -->
+    <remote
+        name="jbub5"
+        fetch="https://github.com/Jbub5"
+        revision="kernel-tree-wip"
+    />
+    <remote name="lineageos"
+        fetch="https://github.com/LineageOS"
+        revision="lineage-22.1"
+    />
+    <remote name="aospa"
+        fetch="https://github.com/AOSPA"
+        revision="vauxite"
+    />
+    <remote name="emredemirn"
+        fetch="https://github.com/EmreDemirn-Repos"
+        revision="lineage-22.1"
+    />
+    <remote name="hipexscape"
+        fetch="https://github.com/hipexscape"
+        revision="15"
+    />
+
+    
+    <!-- merlinx -->
+    <project path="device/xiaomi/merlinx" name="device_xiaomi_merlinx" remote="emredemirn"/>
+    <project path="vendor/xiaomi/merlinx" name="proprietary_vendor_xiaomi_merlinx" remote="emredemirn"/>
+
+    <!-- device -->
+    <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="lineageos"
+        revision="lineage-22.1"
+    />
+
+    <!-- commons -->
+    <project path="device/xiaomi/mt6768-common" name="device_xiaomi_mt6768-common" remote="hipexscape"/>
+    <project path="vendor/xiaomi/mt6768-common" name="proprietary_vendor_xiaomi_mt6768-common" remote="hipexscape"/>
+
+    <!-- kernel source -->
+    <project path="kernel/xiaomi/mt6768" name="kernel_xiaomi_mt6768" remote="jbub5"/>
+
+    <!-- hardware -->
+    <project path="hardware/mediatek" name="android_hardware_mediatek" remote="lineageos"/>
+    <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="aospa"/>
+    
+    <!-- We only need it when not building LineageOS
+    <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="aospa"/>
+    -->
+
+    <!-- packages : We only need it when not building LineageOS 
+    <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="lineageos"/>
+    -->
+
+</manifest>
